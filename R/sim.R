@@ -1,3 +1,5 @@
+library(tidyverse)
+
 # R/sim.R
 # Data simulators for the course. Sourced by every exercises.qmd.
 
@@ -29,5 +31,8 @@
 sim_bottles <- function(n_people = 400, n_tasks = 8, n_alts = 3, seed = 1) {
   set.seed(seed)
 
-  stop("sim_bottles() is not written yet: Module 0, exercise 2")
+  df <- expand.grid(altID = 1:n_alts, task = 1:n_tasks, respID = 1:n_people ) %>%
+    mutate(obsID = (respID - 1) * n_tasks + task)
+
+  df
 }

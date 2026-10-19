@@ -19,7 +19,14 @@ Done outside this file (GitHub, Positron, and the console). Nothing to run here.
 The function itself goes in `R/sim.R`. Use this chunk to call it and run the sanity checks.
 
 ```{r}
+sim_bottles <- function(n_people = 400, n_tasks = 8, n_alts = 3, seed = 1) {
+  set.seed(seed)
 
+  df <- expand.grid(altID = 1:n_alts, task = 1:n_tasks, respID = 1:n_people ) %>%
+    mutate(obsID = (respID - 1) * n_tasks + task)
+
+  df
+}
 ```
 
 ## 3. Recover the guide's MNL and MXL with logitr
