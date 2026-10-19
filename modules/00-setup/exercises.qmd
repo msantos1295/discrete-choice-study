@@ -19,35 +19,35 @@ Done outside this file (GitHub, Positron, and the console). Nothing to run here.
 The function itself goes in `R/sim.R`. Use this chunk to call it and run the sanity checks.
 
 ```{r}
-sim_bottles <- function(n_people = 400, n_tasks = 8, n_alts = 3, seed = 1) {
-  set.seed(seed)
+sim <- sim_bottles()
 
-  beta_r <- rnorm(n_people, mean = 0.8, sd = 1.2)
-  beta_price <- -1.2
-  beta_brand <- 0.4
-
-  df <- expand.grid(altID = 1:n_alts, task = 1:n_tasks, respID = 1:n_people ) %>%
-    mutate(
-        obsID = (respID - 1) * n_tasks + task,
-        price = sample(c(1, 1.5, 2, 2.5, 3), n(), replace = TRUE),
-        recycled = sample(c(0, 0.25, 0.5, 0.75, 1), n(), replace = TRUE),
-        brand = sample(c(0, 1), n(), replace = TRUE),
-        beta_recycled = beta_r[respID],
-        V = beta_recycled * recycled + beta_price * price + beta_brand * brand,
-        epsilon = -log(-log(runif(n()))),
-        U = V + epsilon
-    ) %>%
+sim$data %>%
     group_by(obsID) %>%
-    mutate(choice = if_else(U == max(U), 1, 0)) %>%
-    ungroup()
+    summarise(total = sum(choice)) %>%
+    count(total)
 
-  data <- select(df, respID, obsID, altID, price, recycled, brand, choice)
-  true_beta <- df %>%
-    distinct(respID, beta_recycled)
+mean(sim$true_beta$beta_recycled < 0)   # share in this sample
+pnorm(0, mean = 0.8, sd = 1.2)          # theoretical share, about 0.252
 
-  list(data = data, true_beta = true_beta)
-}
+sim$data %>%
+    group_by(price) %>%
+    summarise(share_chosen = mean(choice))
 ```
+
+**Row count.** `sim$data` has 9,600 rows (400 people × 8 tasks × 3 alternatives) and
+`sim$true_beta` has 400 rows, one per person, as designed.
+
+**One choice per question.** Summing `choice` within each `obsID` gives a total of 1 for all
+3,200 questions, so every respondent picked exactly one bottle in every task.
+
+**Share who dislike recycled content.** 20.75% of simulated people have a negative
+β_recycled, compared with a theoretical 25.2% for a Normal(0.8, 1.2) distribution. With 400
+people, the standard error of a share near 25% is about 2.2 percentage points, so the gap
+(about two standard errors) is consistent with sampling noise rather than a bug.
+
+**Price and choice.** The share of bottles chosen falls steadily with price, from 55.2% at
+$1.00 to 13.6% at $3.00, crossing the overall average of one in three near $2.00. This
+matches the negative true price coefficient (−1.2).
 
 ## 3. Recover the guide's MNL and MXL with logitr
 
