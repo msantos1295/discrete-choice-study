@@ -1,0 +1,84 @@
+# Module 0 exercises: Setup
+
+
+``` r
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Create the repo, clone in Positron, run renv::init()
+
+Done outside this file (GitHub, Positron, and the console). Nothing to
+run here.
+
+## 2. Write sim_bottles() in R/sim.R
+
+The function itself goes in `R/sim.R`. Use this chunk to call it and run
+the sanity checks.
+
+``` r
+sim <- sim_bottles()
+
+sim$data %>%
+    group_by(obsID) %>%
+    summarise(total = sum(choice)) %>%
+    count(total)
+```
+
+    # A tibble: 1 × 2
+      total     n
+      <dbl> <int>
+    1     1  3200
+
+``` r
+mean(sim$true_beta$beta_recycled < 0)   # share in this sample
+```
+
+    [1] 0.2075
+
+``` r
+pnorm(0, mean = 0.8, sd = 1.2)          # theoretical share, about 0.252
+```
+
+    [1] 0.2524925
+
+``` r
+sim$data %>%
+    group_by(price) %>%
+    summarise(share_chosen = mean(choice))
+```
+
+    # A tibble: 5 × 2
+      price share_chosen
+      <dbl>        <dbl>
+    1   1          0.552
+    2   1.5        0.434
+    3   2          0.319
+    4   2.5        0.232
+    5   3          0.136
+
+**Row count.** `sim$data` has 9,600 rows (400 people × 8 tasks × 3
+alternatives) and `sim$true_beta` has 400 rows, one per person, as
+designed.
+
+**One choice per question.** Summing `choice` within each `obsID` gives
+a total of 1 for all 3,200 questions, so every respondent picked exactly
+one bottle in every task.
+
+**Share who dislike recycled content.** 20.75% of simulated people have
+a negative β_recycled, compared with a theoretical 25.2% for a
+Normal(0.8, 1.2) distribution. With 400 people, the standard error of a
+share near 25% is about 2.2 percentage points, so the gap (about two
+standard errors) is consistent with sampling noise rather than a bug.
+
+**Price and choice.** The share of bottles chosen falls steadily with
+price, from 55.2% at \$1.00 to 13.6% at \$3.00, crossing the overall
+average of one in three near \$2.00. This matches the negative true
+price coefficient (−1.2).
+
+## 3. Recover the guide’s MNL and MXL with logitr
+
+## 4. Update README checklist
+
+Done in `README.md`. Nothing to run here.
