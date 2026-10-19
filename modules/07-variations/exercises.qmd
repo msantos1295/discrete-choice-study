@@ -1,0 +1,35 @@
+---
+title: "Module 7 exercises: Variations on a theme"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Pooling two samples with a scale parameter
+
+```{r}
+
+```
+
+## 2. Exploded logit for ranked data
+
+```{r}
+
+```
+
+## 3. Ordered logit
+
+```{r}
+
+```
+
+## 4. (Optional) G-MNL / scale heterogeneity
+
+```{r}
+
+```

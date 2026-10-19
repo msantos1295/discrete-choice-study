@@ -1,0 +1,47 @@
+---
+title: "Module 6 exercises: Mixed logit"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Train's Exercise 3 (Electricity data) in mlogit and logitr
+
+```{r}
+
+```
+
+## 2. Error components version of red bus, blue bus
+
+```{r}
+
+```
+
+## 3. Substitution: MXL vs MNL
+
+```{r}
+
+```
+
+## 4. Distributions: fixed, normal, lognormal price
+
+```{r}
+
+```
+
+## 5. Correlated random parameters
+
+```{r}
+
+```
+
+## 6. (Optional) Multistart
+
+```{r}
+
+```

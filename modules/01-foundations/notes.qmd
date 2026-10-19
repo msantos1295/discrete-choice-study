@@ -1,0 +1,18 @@
+---
+title: "Module 1 notes: Properties of discrete choice models"
+---
+
+**Reading:** Train Ch. 1, 2
+
+## Key ideas, in my own words
+
+-
+
+## Derivations
+
+<!-- Rederive the chapter's key results here. Display math works on GitHub: -->
+<!-- $$P_{ni} = \frac{e^{V_{ni}}}{\sum_j e^{V_{nj}}}$$ -->
+
+## Questions to bring to Claude
+
+-

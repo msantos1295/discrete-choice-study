@@ -1,0 +1,31 @@
+---
+title: "Module 4 exercises: GEV and nested logit"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Red bus, blue bus by simulation
+
+```{r}
+
+```
+
+## 2. Train's Exercise 2 (HC data): test lambda = 1
+
+```{r}
+
+```
+
+## 3. Derive nested logit from the GEV generating function
+
+Written in `notes.qmd` (Derivations section).
+
+## 4. (Optional) Opt-out nest sketch
+
+Written answer:

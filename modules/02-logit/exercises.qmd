@@ -1,0 +1,51 @@
+---
+title: "Module 2 exercises: Logit"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Derivation of logit probabilities (section 3.10)
+
+Written in `notes.qmd` (Derivations section).
+
+## 2. Hand-coded MNL matches logitr
+
+```{r}
+
+```
+
+## 3. Train's Exercise 1 (Heating data)
+
+```{r}
+
+```
+
+## 4. Elasticity matrix and IIA check
+
+```{r}
+
+```
+
+## 5. Welfare via the logsum
+
+```{r}
+
+```
+
+## 6. Hausman-McFadden IIA test
+
+```{r}
+
+```
+
+## 7. (Optional) Clustered panel SEs
+
+```{r}
+
+```

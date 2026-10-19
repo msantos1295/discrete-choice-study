@@ -1,0 +1,35 @@
+---
+title: "Module 9 exercises: Simulation-assisted estimation"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Your own panel MXL matches logitr
+
+```{r}
+
+```
+
+## 2. Fixed vs fresh draws
+
+```{r}
+
+```
+
+## 3. Draws Monte Carlo
+
+```{r}
+
+```
+
+## 4. (Optional) Speed: profile and vectorize
+
+```{r}
+
+```

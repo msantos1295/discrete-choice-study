@@ -1,0 +1,18 @@
+---
+title: "Module 0 notes: Setup"
+---
+
+**Reading:** Train None (Happy Git with R)
+
+## Key ideas, in my own words
+
+-
+
+## Derivations
+
+<!-- Rederive the chapter's key results here. Display math works on GitHub: -->
+<!-- $$P_{ni} = \frac{e^{V_{ni}}}{\sum_j e^{V_{nj}}}$$ -->
+
+## Questions to bring to Claude
+
+-

@@ -1,0 +1,35 @@
+---
+title: "Module 8 exercises: Drawing from densities"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Write your own Halton generator
+
+```{r}
+
+```
+
+## 2. Transformations and Cholesky
+
+```{r}
+
+```
+
+## 3. Simulation variance by draw type
+
+```{r}
+
+```
+
+## 4. (Optional) Metropolis-Hastings sampler
+
+```{r}
+
+```

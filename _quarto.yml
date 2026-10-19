@@ -1,0 +1,8 @@
+project:
+  execute-dir: project   # code runs from the repo root, so here() and relative paths agree
+
+format:
+  gfm: default           # renders .qmd to .md that displays nicely on GitHub (math included)
+
+execute:
+  warning: false

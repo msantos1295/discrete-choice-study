@@ -1,0 +1,35 @@
+---
+title: "Module 1 exercises: Properties of discrete choice models"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Binary choice with Gumbel errors vs the logit formula
+
+```{r}
+
+```
+
+## 2. Scale: error scale 1 vs 2
+
+```{r}
+
+```
+
+## 3. Identification: income without and with an interaction
+
+```{r}
+
+```
+
+## 4. Aggregation: share at mean beta vs mean of shares
+
+```{r}
+
+```

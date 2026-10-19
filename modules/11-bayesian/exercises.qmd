@@ -1,0 +1,35 @@
+---
+title: "Module 11 exercises: Bayesian procedures"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Train's three-layer Gibbs sampler
+
+```{r}
+
+```
+
+## 2. Check against bayesm
+
+```{r}
+
+```
+
+## 3. MCMC diagnostics
+
+```{r}
+
+```
+
+## 4. (Optional) HB vs MSL on a correlated model
+
+```{r}
+
+```

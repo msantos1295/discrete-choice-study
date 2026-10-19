@@ -1,0 +1,35 @@
+---
+title: "Module 10 exercises: Individual-level parameters"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Conditional means vs true beta
+
+```{r}
+
+```
+
+## 2. Conditional means as tasks increase
+
+```{r}
+
+```
+
+## 3. Average conditional distribution check
+
+```{r}
+
+```
+
+## 4. (Optional) Demographics: regression vs interaction
+
+```{r}
+
+```

@@ -1,0 +1,37 @@
+---
+title: "Module 15 exercises: WTP space, uncertainty and reporting"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Preference space vs WTP space
+
+```{r}
+
+```
+
+## 2. WTP intervals three ways
+
+```{r}
+
+```
+
+## 3. Market simulation
+
+```{r}
+
+```
+
+## 4. Policy memo
+
+Write the memo as its own file, `memo.qmd`, in this folder.
+
+## 5. (Optional) Score the memo against Johnston et al.
+
+Written answer:

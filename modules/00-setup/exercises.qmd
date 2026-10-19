@@ -1,0 +1,33 @@
+---
+title: "Module 0 exercises: Setup"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Create the repo, clone in Positron, run renv::init()
+
+Done outside this file (GitHub, Positron, and the console). Nothing to run here.
+
+## 2. Write sim_bottles() in R/sim.R
+
+The function itself goes in `R/sim.R`. Use this chunk to call it and run the sanity checks.
+
+```{r}
+
+```
+
+## 3. Recover the guide's MNL and MXL with logitr
+
+```{r}
+
+```
+
+## 4. Update README checklist
+
+Done in `README.md`. Nothing to run here.

@@ -1,0 +1,18 @@
+---
+title: "Module 4 notes: GEV and nested logit"
+---
+
+**Reading:** Train Ch. 4
+
+## Key ideas, in my own words
+
+-
+
+## Derivations
+
+<!-- Rederive the chapter's key results here. Display math works on GitHub: -->
+<!-- $$P_{ni} = \frac{e^{V_{ni}}}{\sum_j e^{V_{nj}}}$$ -->
+
+## Questions to bring to Claude
+
+-

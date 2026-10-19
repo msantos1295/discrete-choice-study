@@ -1,0 +1,41 @@
+---
+title: "Module 3 exercises: Numerical maximization"
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(here)
+# Load your function library (R/*.R)
+for (f in list.files(here("R"), pattern = "\\.R$", full.names = TRUE)) source(f)
+```
+
+## 1. Newton-Raphson and BHHH vs BFGS
+
+```{r}
+
+```
+
+## 2. Train's convergence statistic by iteration
+
+```{r}
+
+```
+
+## 3. Scaling: price in cents
+
+```{r}
+
+```
+
+## 4. Hessian, OPG and sandwich SEs
+
+```{r}
+
+```
+
+## 5. (Optional) Log-likelihood contours with optimizer paths
+
+```{r}
+
+```
